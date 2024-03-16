@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2776a32-edb6-4895-9ce9-68627136bcf1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/mnx/utils/rule_out.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mnx/examples/example_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/mnx/examples/example_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mnx/examples/sel_solver.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mnx/sel/Cholesky.py" beforeDir="false" afterPath="$PROJECT_DIR$/mnx/sel/Cholesky.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mnx/sel/Gauss.py" beforeDir="false" afterPath="$PROJECT_DIR$/mnx/sel/Gauss.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mnx/sel/LU.py" beforeDir="false" afterPath="$PROJECT_DIR$/mnx/sel/LU.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mnx/sel/Solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/mnx/sel/Solver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mnx/sel/linear_solver.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +71,7 @@
       <updated>1710280127633</updated>
       <workItem from="1710280140174" duration="11861000" />
       <workItem from="1710514457204" duration="542000" />
-      <workItem from="1710515897193" duration="9011000" />
+      <workItem from="1710515897193" duration="12097000" />
     </task>
     <servers />
   </component>
@@ -95,11 +90,11 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/mnx$example_2.coverage" NAME="example_2 Coverage Results" MODIFIED="1710553936629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/examples" />
+    <SUITE FILE_PATH="coverage/mnx$example_2.coverage" NAME="example_2 Coverage Results" MODIFIED="1710557206211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/examples" />
     <SUITE FILE_PATH="coverage/mnx$main.coverage" NAME="main Coverage Results" MODIFIED="1710280570241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx" />
     <SUITE FILE_PATH="coverage/mnx$matrix.coverage" NAME="matrix Coverage Results" MODIFIED="1710280480209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/core" />
     <SUITE FILE_PATH="coverage/mnx$linear_solver.coverage" NAME="linear_solver Coverage Results" MODIFIED="1710286873839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/sel" />
-    <SUITE FILE_PATH="coverage/mnx$Solver.coverage" NAME="Solver Coverage Results" MODIFIED="1710551974206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/sel" />
+    <SUITE FILE_PATH="coverage/mnx$Solver.coverage" NAME="Solver Coverage Results" MODIFIED="1710554790137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/sel" />
     <SUITE FILE_PATH="coverage/mnx$sel_solver.coverage" NAME="sel_solver Coverage Results" MODIFIED="1710287829471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/examples" />
   </component>
 </project>

@@ -7,9 +7,13 @@ from mnx.sel.Cholesky import CholeskyMethod
 from mnx.sel.Gauss_Jordan import GaussJordanMethod
 from mnx.sel.Gauss import GaussMethod
 
+from mnx.utils.rule_out import rule_out_cholesky
+from mnx.utils.rule_out import rule_out_lu
+from mnx.utils.rule_out import rule_out_gauss
+from mnx.utils.rule_out import rule_out_gauss_jordan
+
 class LinearSolver:
     def __init__(self, A: np.array, *b: np.array):
-        self.scores = None
         self.A = np.array(A)
         self.b = list(np.array(b))
         print(self.b)
@@ -17,10 +21,17 @@ class LinearSolver:
         self.methods = {
             'cholesky': CholeskyMethod(),
             'lu': LUMethod(),
-            'gauss_jordan': GaussJordanMethod(),
-            'gauss': GaussMethod()
+            'gauss': GaussMethod(),
+            'gauss_jordan': GaussJordanMethod()
         }
-        self.best_method = self.optimize()
+        self.rule_out_errors = {
+            'cholesky': rule_out_cholesky,
+            'lu': rule_out_lu,
+            'gauss': rule_out_gauss,
+            'gauss_jordan': rule_out_gauss_jordan
+        }
+        self.best_method, self.scores, self.possible_methods = self.optimize()
+        self.discarded_methods = {k: v for k, v in self.methods.items() if k not in self.possible_methods}
 
     def optimize(self):
         """
@@ -56,8 +67,9 @@ class LinearSolver:
             scores['cholesky'] += 1
 
         print("Optimized method: ", max(scores, key=scores.get), scores)
-        self.scores = scores
-        return max(scores, key=scores.get)
+        possible_methods = [k for k, v in scores.items() if v >= 0]
+
+        return max(scores, key=scores.get), scores, possible_methods
 
     def solve(self):
         method = self.methods[self.best_method]
@@ -73,17 +85,29 @@ class LinearSolver:
         :return: dict
         """
         solutions = {}
-        possible_methods = [k for k, v in self.scores.items() if v >= 0]
 
         # Remove the best method from the list.
-        possible_methods.remove(self.best_method)
+        solvers_methods = self.possible_methods.copy()
+        solvers_methods.remove(self.best_method)
 
-        for method in possible_methods:
+        for method in solvers_methods:
             solution = self.methods[method].solve(self.A, self.b)
             if solution is not None:
                 solutions[method] = solution
 
-        return solutions
+        return solutions, solvers_methods
+
+    def rule_out(self, methods):
+        """
+        Explain why the method was not chosen.
+        :param methods: dict
+        :return: str
+        """
+        print(methods)
+        reasons = {}
+        for method, obj in methods.items():
+            reasons[method] = self.rule_out_errors[method](self.A)
+        return reasons
 
     def __str__(self):
         return f"""
@@ -97,5 +121,5 @@ b: {self.b}
 a. Best Method: {self.best_method}
 b. Solution: {self.solve()}
 c. Other Methods: {self.solve_all()}
-d. Explained why no other method was chosen: 
+d. Explained why no other method was chosen: {self.rule_out(self.discarded_methods)}
         """
