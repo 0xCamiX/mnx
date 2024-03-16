@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='mnx',
+    name='mnx-math',
     packages=['mnx'],
     version='0.1.0',
     description='A method numerical analysis package',
