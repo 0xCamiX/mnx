@@ -5,27 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2776a32-edb6-4895-9ce9-68627136bcf1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/mnx.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnx/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnx/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnx/core/matrix.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnx/diff/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnx/examples/sel_solver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnx/int/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnx/linprog/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnx/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnx/polynomial/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnx/sel/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnx/sel/linear_solver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnx/senl/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnx/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnx/utils/linalg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mnx/examples/example_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mnx/sel/Cholesky.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mnx/sel/Gauss.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mnx/sel/Gauss_Jordan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mnx/sel/IMethod.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mnx/sel/LU.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mnx/sel/Solver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +29,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2dbcGlY3kGdqza8X7J5JGGrhPJD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -53,23 +40,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.linear_solver.executor": "Debug",
-    "Python.main.executor": "Run",
-    "Python.matrix.executor": "Run",
-    "Python.sel_solver.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Solver.executor&quot;: &quot;Run&quot;,
+    &quot;Python.example_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.linear_solver.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.matrix.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sel_solver.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -85,17 +74,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710280127633</updated>
-      <workItem from="1710280140174" duration="7427000" />
+      <workItem from="1710280140174" duration="11861000" />
+      <workItem from="1710514457204" duration="542000" />
+      <workItem from="1710515897193" duration="4500000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/mnx$example_2.coverage" NAME="example_2 Coverage Results" MODIFIED="1710548119140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/examples" />
     <SUITE FILE_PATH="coverage/mnx$main.coverage" NAME="main Coverage Results" MODIFIED="1710280570241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx" />
     <SUITE FILE_PATH="coverage/mnx$matrix.coverage" NAME="matrix Coverage Results" MODIFIED="1710280480209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/core" />
     <SUITE FILE_PATH="coverage/mnx$linear_solver.coverage" NAME="linear_solver Coverage Results" MODIFIED="1710286873839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/sel" />
-    <SUITE FILE_PATH="coverage/mnx$sel_solver.coverage" NAME="sel_solver Coverage Results" MODIFIED="1710287686876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/examples" />
+    <SUITE FILE_PATH="coverage/mnx$Solver.coverage" NAME="Solver Coverage Results" MODIFIED="1710291130968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/sel" />
+    <SUITE FILE_PATH="coverage/mnx$sel_solver.coverage" NAME="sel_solver Coverage Results" MODIFIED="1710287829471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/examples" />
   </component>
 </project>
