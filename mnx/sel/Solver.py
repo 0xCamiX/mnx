@@ -8,10 +8,12 @@ from mnx.sel.Gauss_Jordan import GaussJordanMethod
 from mnx.sel.Gauss import GaussMethod
 
 class LinearSolver:
-    def __init__(self, A: np.array, b: np.array, ind_var: bool = False):
+    def __init__(self, A: np.array, *b: np.array):
+        self.scores = None
         self.A = np.array(A)
-        self.b = np.array(b)
-        self.ind_var = ind_var
+        self.b = list(np.array(b))
+        print(self.b)
+        self.multi_b = len(self.b) > 1
         self.methods = {
             'cholesky': CholeskyMethod(),
             'lu': LUMethod(),
@@ -34,21 +36,27 @@ class LinearSolver:
         }
 
         if is_non_singular(self.A):
-            #scores['lu'] += 1
+            scores['lu'] += 1
             scores['gauss'] += 1
-            #scores['cholesky'] += 1
+            scores['gauss_jordan'] += 1
 
         if is_symmetric(self.A):
-            #scores['cholesky'] += 1
-            pass
+            scores['cholesky'] += 1
+        else:
+            scores['cholesky'] -= 1
+
 
         if is_definite_positive(self.A):
-            #scores['cholesky'] += 1
-            pass
-        if self.ind_var:
-            scores['gauss'] += 1
+            scores['cholesky'] += 1
+        else:
+            scores['cholesky'] -= 1
+
+        if self.multi_b:
+            scores['lu'] += 1
+            scores['cholesky'] += 1
 
         print("Optimized method: ", max(scores, key=scores.get), scores)
+        self.scores = scores
         return max(scores, key=scores.get)
 
     def solve(self):
@@ -58,6 +66,24 @@ class LinearSolver:
         if solution is not None:
             return solution
         return None
+
+    def solve_all(self):
+        """
+        Filter the methods that can solve the problem and return the solutions.
+        :return: dict
+        """
+        solutions = {}
+        possible_methods = [k for k, v in self.scores.items() if v >= 0]
+
+        # Remove the best method from the list.
+        possible_methods.remove(self.best_method)
+
+        for method in possible_methods:
+            solution = self.methods[method].solve(self.A, self.b)
+            if solution is not None:
+                solutions[method] = solution
+
+        return solutions
 
     def __str__(self):
         return f"""
@@ -70,6 +96,6 @@ b: {self.b}
         
 a. Best Method: {self.best_method}
 b. Solution: {self.solve()}
-c. Other Methods: 
+c. Other Methods: {self.solve_all()}
 d. Explained why no other method was chosen: 
         """

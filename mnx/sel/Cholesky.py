@@ -13,8 +13,10 @@ class CholeskyMethod(IMethod):
         try:
             L = np.linalg.cholesky(A)
             LT = L.T
-            y = np.linalg.solve(L, b)
-            x = np.linalg.solve(LT, y)
+
+            y = [np.linalg.solve(L, bi) for bi in b]
+            x = [np.linalg.solve(LT, yi) for yi in y]
+
             return x
         except np.linalg.LinAlgError:
             return None

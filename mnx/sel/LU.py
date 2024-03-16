@@ -12,8 +12,9 @@ class LUMethod(IMethod):
         :return: np.array
         """
         try:
-            LU, piv = lu_factor(A)
-            x = lu_solve((LU, piv), b)
+            LU, Piv = lu_factor(A)
+            x = [lu_solve((LU, Piv), bi) for bi in b]
+
             return x
         except np.linalg.LinAlgError:
             return None
