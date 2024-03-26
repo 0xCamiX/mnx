@@ -1,7 +1,17 @@
-import numpy as np
-from mnx.sel.IMethod import IMethod
+"""
+Cholesky method for solving linear systems.
 
-class CholeskyMethod(IMethod):
+This method is based on the Cholesky decomposition of a matrix. It is a method that is used to solve
+linear systems of equations. The Cholesky decomposition is a decomposition of a matrix into a lower
+triangular matrix and its transpose. The Cholesky decomposition is used to solve linear systems of
+equations by first decomposing the matrix into its lower triangular form and then solving the system
+of equations using forward and backward substitution.
+"""
+
+import numpy as np
+from mnx.sel.IMethod import IExactMethod
+
+class CholeskyMethod(IExactMethod):
     def solve(self, A: np.array, b: np.array):
         """
         Cholesky method for solving linear systems.

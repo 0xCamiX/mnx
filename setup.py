@@ -1,9 +1,9 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
-    name='mnx-math',
-    packages=['mnx'],
-    version='0.1.0',
+    name='mnx-solver',
+    packages=find_packages(),
+    version='0.1.0.1',
     description='A method numerical analysis package',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',

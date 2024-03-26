@@ -1,5 +1,12 @@
+"""
+Gauss-Jordan method for solving linear systems.
+
+This module contains the Gauss-Jordan method for solving linear systems. The method is implemented in the
+solve_gauss_jordan function, which receives a matrix A and a vector b and returns the solution to the system.
+"""
+
 import numpy as np
-from mnx.sel.IMethod import IMethod
+from mnx.sel.IMethod import IExactMethod
 
 def solve_gauss_jordan(A: np.array, b: np.array):
     """
@@ -35,7 +42,7 @@ def solve_gauss_jordan(A: np.array, b: np.array):
     return b
 
 
-class GaussJordanMethod(IMethod):
+class GaussJordanMethod(IExactMethod):
     def solve(self, A: np.array, b):
         """
         Gauss-Jordan method for solving linear systems.

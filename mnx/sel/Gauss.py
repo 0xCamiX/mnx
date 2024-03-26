@@ -1,6 +1,22 @@
-import numpy as np
-from mnx.sel.IMethod import IMethod
+"""
+Gauss method for solving linear systems.
 
+This method is based on the Gauss elimination method, which is a direct method for solving linear systems.
+It is a simple method that is not very efficient for large systems, but it is very accurate and stable.
+
+The method is based on the following steps:
+1. Partial Pivoting: If the diagonal element is zero, the method will swap the current row with another row
+that has a non-zero element in the same column. This is done to avoid division by zero.
+
+2. Elimination: The method will iterate over each row and column, and will eliminate the elements below the
+diagonal by subtracting a multiple of the current row from the rows below it.
+
+3. Back Substitution: Once the matrix is in upper triangular form, the method will solve the system by
+back substitution.
+"""
+
+import numpy as np
+from mnx.sel.IMethod import IExactMethod
 
 def solve_gauss(A: np.array, b: np.array):
     """
@@ -43,7 +59,7 @@ def solve_gauss(A: np.array, b: np.array):
     return x
 
 
-class GaussMethod(IMethod):
+class GaussMethod(IExactMethod):
     def solve(self, A: np.array, b):
         """
         Gauss method for solving linear systems.

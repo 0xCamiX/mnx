@@ -5,7 +5,6 @@ Utils for linalg operations.
 import numpy as np
 from numpy import bool_
 
-
 def is_symmetric(A: np.array) -> bool:
     """
     Check if a matrix is symmetric.
