@@ -9,7 +9,7 @@ of equations using forward and backward substitution.
 """
 
 import numpy as np
-from mnx.sel.IMethod import IExactMethod
+from mnx.exact_linear_methods.IMethod import IExactMethod
 
 class CholeskyMethod(IExactMethod):
     def solve(self, A: np.array, b: np.array):
@@ -20,6 +20,7 @@ class CholeskyMethod(IExactMethod):
         :param b: np.array
         :return: np.array
         """
+        print("CholeskyMethod")
         try:
             L = np.linalg.cholesky(A)
             LT = L.T

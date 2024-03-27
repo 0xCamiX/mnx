@@ -1,9 +1,9 @@
 import numpy as np
 
 from mnx.utils.norms import optimize_norm
-from mnx.asel.Richardson import RichardsonMethod
-from mnx.asel.Jacobi import JacobiMethod
-from mnx.asel.GaussSeidel import GaussSeidelMethod
+from mnx.approx_linear_methods.Richardson import RichardsonMethod
+from mnx.approx_linear_methods.Jacobi import JacobiMethod
+from mnx.approx_linear_methods.GaussSeidel import GaussSeidelMethod
 
 class AproxLinearSolver:
     def __init__(self, A: np.array, b: np.array, x0: np.array, tol: float, max_iter: int):

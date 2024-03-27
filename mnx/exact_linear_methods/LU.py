@@ -13,7 +13,7 @@ and then solving the system of equations using forward and backward substitution
 
 import numpy as np
 from scipy.linalg import lu_factor, lu_solve
-from mnx.sel.IMethod import IExactMethod
+from mnx.exact_linear_methods.IMethod import IExactMethod
 
 class LUMethod(IExactMethod):
     def solve(self, A: np.array, b: np.array):
@@ -24,6 +24,7 @@ class LUMethod(IExactMethod):
         :param b: np.array
         :return: np.array
         """
+        print("LUMethod")
         try:
             LU, Piv = lu_factor(A)
             x = [lu_solve((LU, Piv), bi) for bi in b]

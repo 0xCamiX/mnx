@@ -6,7 +6,7 @@ solve_gauss_jordan function, which receives a matrix A and a vector b and return
 """
 
 import numpy as np
-from mnx.sel.IMethod import IExactMethod
+from mnx.exact_linear_methods.IMethod import IExactMethod
 
 def solve_gauss_jordan(A: np.array, b: np.array):
     """

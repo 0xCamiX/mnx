@@ -23,7 +23,7 @@ Here's a simple example of how to use `mnx`:
 
 ```python
 import numpy as np
-from mnx.sel.Solver import LinearSolver
+from mnx.exact_linear_methods.Solver import LinearSolver
 
 # Define the system
 A = np.array([[3, 2], [1, 2]])

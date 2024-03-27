@@ -16,7 +16,7 @@ back substitution.
 """
 
 import numpy as np
-from mnx.sel.IMethod import IExactMethod
+from mnx.exact_linear_methods.IMethod import IExactMethod
 
 def solve_gauss(A: np.array, b: np.array):
     """
@@ -68,6 +68,7 @@ class GaussMethod(IExactMethod):
         :param b: np.Array or list of np.Array
         :return: np.Array or list of np.Array
         """
+        print("GaussMethod")
         if isinstance(b, list):  # if b is a list of arrays
             solutions = []
             for bi in b:  # iterate over each array in the list
