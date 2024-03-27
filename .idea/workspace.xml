@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2776a32-edb6-4895-9ce9-68627136bcf1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mnx/approx_linear_methods/GaussSeidel.py" beforeDir="false" afterPath="$PROJECT_DIR$/mnx/approx_linear_methods/GaussSeidel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mnx/examples/example_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/mnx/examples/example_4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-    </list>
+    <list default="true" id="a2776a32-edb6-4895-9ce9-68627136bcf1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +85,7 @@
       <workItem from="1711157129683" duration="5224000" />
       <workItem from="1711214146332" duration="3460000" />
       <workItem from="1711378972552" duration="686000" />
-      <workItem from="1711486951510" duration="17548000" />
+      <workItem from="1711486951510" duration="17870000" />
     </task>
     <servers />
   </component>
@@ -120,6 +115,6 @@
     <SUITE FILE_PATH="coverage/mnx$example_3.coverage" NAME="example_3 Coverage Results" MODIFIED="1711225359919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/examples" />
     <SUITE FILE_PATH="coverage/mnx$Richardson.coverage" NAME="Richardson Coverage Results" MODIFIED="1711159631449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/asel" />
     <SUITE FILE_PATH="coverage/mnx$sel_solver.coverage" NAME="sel_solver Coverage Results" MODIFIED="1710287829471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/examples" />
-    <SUITE FILE_PATH="coverage/mnx$example_4.coverage" NAME="example_4 Coverage Results" MODIFIED="1711506511401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/examples" />
+    <SUITE FILE_PATH="coverage/mnx$example_4.coverage" NAME="example_4 Coverage Results" MODIFIED="1711506754149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mnx/examples" />
   </component>
 </project>
