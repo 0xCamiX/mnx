@@ -23,12 +23,15 @@ class RichardsonMethod(IMethod):
         T = self.get_transformation_matrix(A)
 
         x = x0
+        x_prev = x0
 
         print(f"x0 = T_r*x + b = {T} * {x} + {b}")
 
         for i in range(max_iter):
+            x_prev = x
             x = T.dot(x) + b
             norm, _ = optimize_norm(A.dot(x) - b)
+            error_relative = np.linalg.norm(x - x_prev) / np.linalg.norm(x) if np.linalg.norm(x) != 0 else 0
+            print(f"Iteration {i}: Relative Error = {error_relative}")
             if norm < tol:
                 return x, i
-        return x, max_iter

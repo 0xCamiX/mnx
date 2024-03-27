@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='mnx-solver',
     packages=find_packages(),
-    version='0.1.0.1',
+    version='0.1.0.2',
     description='A method numerical analysis package',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',

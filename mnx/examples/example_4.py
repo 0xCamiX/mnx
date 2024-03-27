@@ -22,12 +22,4 @@ max_iter = 1000
 # Del objeto LinearSolver índicarle que instancie un modulo del solucionador por aproximación.
 
 solver = LinearSolver.create_solver('approximation', A, b, x0, delta, max_iter)
-
-print(f"""a. Relaciones iterativas de cada uno de los métodos\n
-
-Richardson: {solver.solve(RichardsonMethod())} \n
-Jacobi: {solver.solve(JacobiMethod())} \n
-Gauss-Seidel: {solver.solve(GaussSeidelMethod())} \n
-
-""")
-
+print(solver.solve())

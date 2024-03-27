@@ -28,11 +28,15 @@ class JacobiMethod(IMethod):
         D, D_inv = self.get_diagonal_matrix(A)
 
         x = x0
+        x_prev = x0
 
         print("x0 = T_j*x + D^(-1)*b = ", T, "*", x, "+", D_inv, "*", b)
 
         for i in range(max_iter):
+            x_prev = x
             x = T.dot(x) + D_inv.dot(b)
             norm, _ = optimize_norm(A.dot(x) - b)
+            error_relative = np.linalg.norm(x - x_prev) / np.linalg.norm(x) if np.linalg.norm(x) != 0 else 0
+            print(f"Iteration {i}: Relative Error = {error_relative}")
             if norm < tol:
                 return x, i
